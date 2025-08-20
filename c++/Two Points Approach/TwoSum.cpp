@@ -1,7 +1,25 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<unordered_map>
 using namespace std;
+bool HashSet(vector<int> arr,int target)
+{
+    unordered_map<int,int> Ele;
+    for(auto i: arr)
+    {
+        if(Ele.find(i)!=Ele.end())
+        Ele[i]++;
+        else
+        Ele[i]=1;
+    }
+    for(auto i:arr)
+    {
+        if((Ele.find(target-i)!=Ele.end()) | (target=2*i) & Ele[i]>1)
+        return true;
+    }
+    return false;
+}
 bool Target(vector<int> arr,int target)
 {
     sort(arr.begin(),arr.end());
@@ -23,6 +41,6 @@ int main()
 {
     vector<int> arr1={10,20,50,70,40,15,35,60};
     int target=50;
-    cout<<Target(arr1,target);
+    cout<<HashSet(arr1,target);
     return 0;
 }
