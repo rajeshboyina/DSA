@@ -7,7 +7,7 @@ int detch_national_flag(vector<int> num)
 	int l,mid,high;
 	l=0;
 	mid=0;
-	high=num.size();
+	high=num.size()-1;
 	while(mid<=high)
 	{
 		if (num[mid]==0)
@@ -32,7 +32,7 @@ int main()
 {
 	vector<int> num;
 	int n,i;
-	cout<<"enter size ";
+	//cout<<"enter size ";
 	cin>>n;
 	for(int t=0;t<n;t++)
 	{

@@ -11,7 +11,7 @@ int DupWithinK(vector<int> arr,int k)
         if(mp.find(arr[i])!=mp.end())
         {
             res++;
-            cout<<i<<endl;
+            //cout<<arr[i]<<endl;
         }
             mp.insert(arr[i]);
             if(i>=k)

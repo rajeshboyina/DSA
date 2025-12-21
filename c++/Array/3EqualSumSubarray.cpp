@@ -32,7 +32,7 @@ vector<int> ThreeSumSubArray(vector<int> arr)
     return res;
 }
 int main(){
-vector<int> arr={1,0,-1,2,1,0};
+vector<int> arr={1,1,1,2,1,0,4,-1};
 vector<int> res;
 res=ThreeSumSubArray(arr);
 for(auto i:res)

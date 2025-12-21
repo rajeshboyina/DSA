@@ -3,7 +3,7 @@
 #include<queue>
 #include<algorithm>
 using namespace std;
-vector<int> Prority(vector<int> arr,int k)
+vector<int> Priority(vector<int> arr,int k)
 {
     priority_queue<int ,vector<int>,greater<int>>
     minH(arr.begin(),arr.begin()+k);
@@ -25,7 +25,7 @@ vector<int> Prority(vector<int> arr,int k)
 int main(){
     vector<int> arr={1,23,12,9,30,2,50};
     int k=3;
-    vector<int> res=Prority(arr,k);
+    vector<int> res=Priority(arr,k);
     for(auto i: res)
         cout<<i<<" ";
     return 0;

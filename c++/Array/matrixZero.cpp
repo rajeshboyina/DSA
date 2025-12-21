@@ -92,7 +92,7 @@ int main()
         for (auto ele : it) {
             cout << ele << " ";
         }
-        cout << "n";
+        cout << "n"<<endl;;
     }
     return 0;
 }

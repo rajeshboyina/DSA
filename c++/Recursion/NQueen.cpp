@@ -98,8 +98,8 @@ int main()
     int n,c=1;
     cin>>n;
     vector<vector<string>> ans;
-    //ans=NQueen(n);
-    ans=OptimizedNQueen(n);
+    ans=NQueen(n);
+    //ans=OptimizedNQueen(n);
     for(auto i: ans)
     {
         cout<<"sol-"<<c++<<endl;
