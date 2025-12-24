@@ -20,13 +20,15 @@ int HashSet(vector<int> arr)
             Set.insert(i);
     }
     for( auto i:Set )
-        return i;
-
+        cout<< i<<",";
+    //return sizeof(Set);
+    cout<<endl;
+    return Set.size();
 }
 int main()
 {
-    vector<int> arr={1,2,3,2,1};
-    cout<<Xor(arr);
+    vector<int> arr={1,2,3,2,1,1,2};
+    cout<<Xor(arr)<<endl;
     cout<<HashSet(arr);
     return 0;
 }

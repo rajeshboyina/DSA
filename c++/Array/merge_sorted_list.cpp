@@ -1,5 +1,6 @@
 #include <iostream>
-using namespace std
+#include<algorithm>
+using namespace std;
 int main()
 {
  int list1[]={1,3,5,7,9};
@@ -16,8 +17,8 @@ int main()
      l--;
      r++;
  }
- sort(list1);
- sort(list2);
+  sort(list1,list1+m);
+  sort(list2,list2+n);
  for(auto i: list1)
     cout<<i<<" ";
  for(auto i: list2)
