@@ -17,8 +17,8 @@ int main()
      l--;
      r++;
  }
-  sort(list1,list1+m);
-  sort(list2,list2+n);
+//   sort(list1,list1+m);
+//   sort(list2,list2+n);
  for(auto i: list1)
     cout<<i<<" ";
  for(auto i: list2)

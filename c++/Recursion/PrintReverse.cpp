@@ -1,13 +1,13 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void Print(int n)
+void Print(vector<int> arr,int n)
 {
-    if(n==0)
+    if(n<0)
     return;
-    cout<<n;
-    Print(--n);
-    cout<<n;
+    cout<<arr[n]<<" ";
+    Print(arr,--n);
+    //cout<<n;
 }
 void Sum(int i,int res)
 {
@@ -25,16 +25,16 @@ void Reverse(int l,int h,vector<int> arr)
     Reverse(++l,--h,arr);
 }
 int main(){
-    Print(6);
-    cout<<endl;
-    Sum(6,0);
-    cout<<endl;
+    // cout<<endl;
+    // Sum(6,0);
+    // cout<<endl;
     vector<int> arr={6,2,8,4,5,3,7};
-    for(auto i:arr)
-    cout<<i<<" ";
-    cout<<endl;
-    Reverse(0,arr.size()-1,arr);
-    for(auto i: arr)
-    cout<<endl;
+    Print(arr,arr.size()-1);
+    // for(auto i:arr)
+    // cout<<i<<" ";
+    // cout<<endl;
+    // Reverse(0,arr.size()-1,arr);
+    // for(auto i: arr)
+    // cout<<endl;
     return 0;
 }
