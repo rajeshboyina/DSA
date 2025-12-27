@@ -9,6 +9,7 @@ void ArrI(vector<int>& arr)
     {
         if(arr[i]!=-1 && arr[i]!=arr[arr[i]])
             swap(arr[i],arr[arr[i]]);
+        else
         i++;
     }
 }

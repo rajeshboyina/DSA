@@ -17,7 +17,7 @@ int pasical(int num)
 int main()
 {
 	int n;
-	cout<<"enter row number ";
+	//cout<<"enter row number ";
 	cin>>n;
 	pasical(n);
 	return 0;
