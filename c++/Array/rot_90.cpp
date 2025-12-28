@@ -13,7 +13,7 @@ int main()
 	{
 		for(int j=0;j<3;j++)
 		{
-			cout<<matrix[i][j]<" ";
+			cout<<matrix[i][j]<<" ";
 		}
 		cout<<endl;
 	}
