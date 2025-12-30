@@ -6,6 +6,7 @@ int Count1InBinary(int val)
     int count=0;
     while(val)
     {
+        cout<<val<<" "<<count<<endl;
         count+=val&1;
         val>>=1;
     }
