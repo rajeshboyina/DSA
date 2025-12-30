@@ -5,13 +5,27 @@ class ZeroEnd
     {
         int c,n=arr.length;
         c=0;
+        // for(int i=0;i<n;i++)
+        // {
+        //     if(arr[i]!=0)
+        //         arr[c++]=arr[i];
+        // }
+        // while(c<n)
+        // arr[c++]=0;
+        // return arr;
         for(int i=0;i<n;i++)
         {
             if(arr[i]!=0)
-                arr[c++]=arr[i];
+            {
+                if(c!=i)
+                {
+                    int temp=arr[c];
+                    arr[c]=arr[i];
+                    arr[i]=temp;
+                }
+                c++;
+            }
         }
-        while(c<n)
-        arr[c++]=0;
         return arr;
     }
     public static void main(String[] args) {
