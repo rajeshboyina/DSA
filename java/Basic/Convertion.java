@@ -1,17 +1,31 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 class Convertion
 {
     public static int toDecimal(int[] ip,int s,int n)
     {
         int res=0;
-        int e=0;
+        int e=1;
         for(int i=ip.length-1;i>=0;i--)
         {
-            res+=ip[i]*e;
-            e*=s;
+            res+=(ip[i]*e);
+            e=s*e;
         }
         return res;
 
+    }
+    static ArrayList fromDecimal(int t,int d)
+    {
+        ArrayList<Integer> res=new ArrayList<>();
+        int e=d;
+        res.add(t%e);
+        t=t/e;
+        while(t!=0)
+        {
+            res.add(0,t%e);
+            t=t/e;
+        }
+        return res;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -31,6 +45,13 @@ class Convertion
             }       
         }
         int src=sc.nextInt();
-        System.out.println(toDecimal(ip,src,n));
+        for (int ele : ip) {
+            System.out.println(ele);
+        }
+        int temp=toDecimal(ip, src, n);
+        System.out.println(temp);
+        int d=sc.nextInt();
+        ArrayList<Integer> res=fromDecimal(temp, d);
+        System.out.println(res);
     }
 }
