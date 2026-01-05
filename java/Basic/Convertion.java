@@ -48,10 +48,22 @@ class Convertion
         for (int ele : ip) {
             System.out.println(ele);
         }
+        if(src!=10)
+        {
         int temp=toDecimal(ip, src, n);
-        System.out.println(temp);
+        System.out.println("Decimal value"+temp);
+        }
+        else
+        {
+            int temp=Integer.parseInt(code);
+        }
         int d=sc.nextInt();
+        if(d!=10)
+        {
         ArrayList<Integer> res=fromDecimal(temp, d);
         System.out.println(res);
+        }
+        else
+        System.err.println(temp);
     }
 }
